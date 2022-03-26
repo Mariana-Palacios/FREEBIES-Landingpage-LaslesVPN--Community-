@@ -1,0 +1,239 @@
+@import "./functions";
+@import "./variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $rubik;
+}
+
+body{
+    background-color: $white;
+}
+
+.nav{
+    display:flex;
+    margin: 50px 150px;
+    justify-content: space-between;
+    &__items{
+        @include display-flex-row;
+        font-size: 16px;
+        &--item{
+            margin-left: 40px;
+        }
+    }
+    &__userState{
+        @include display-flex-row;
+        align-self: center;
+        font-weight: 700;
+        &--SignUp{
+            height: 45px;
+            width: 150px;
+            border: 1px solid $pink;
+            border-radius: 50px;
+            text-align: center;
+            color:$pink;
+            margin-top: -10px;
+            padding: 10px;
+        }
+        &--Space{
+            width: 30px;
+        }
+        &--SignIn{
+            color: $dark-blue;
+            
+        }
+    }
+}
+
+.container1{
+    @include display-flex-row;
+    justify-content: space-between;
+    margin: 100px 150px;
+    color: #0B132A;
+    &__text{
+        &--Slogan{
+            font-size: 80px;
+            line-height:90px;
+            font-weight: 500;
+        }
+        &--P{
+            margin-top: 20px;
+            font-size: 23px;
+            color: $gray;
+        }
+    }
+    &__Button{
+        &--Box{
+            margin-top:50px;
+            width:250px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: $orange;
+            box-shadow: 10px 20px 30px $ligth-orange;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: $white;
+            font-weight: 700;
+        }
+    }
+}
+
+.container2{
+    height: 200px;
+    width: 1150px;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 10px 20px 30px rgba(238, 234, 234, 0.952);
+    position: relative;
+    margin: 0 auto;
+    background-color: $white;
+    @include display-flex-row;
+    justify-content: space-around;
+    align-items: center;
+    &__information{
+        @include display-flex-row;
+        img{
+            height: 55px;
+            width: 55px;
+        }
+        &--numbers{
+            margin-left: 26px;
+        }
+    }
+    &__line{
+        height: 125.57px;
+        width: 0px;
+        border: 2px solid #EEEFF2;
+        
+    }
+}
+
+.container3{
+    @include display-flex-row;
+    justify-content: center;
+    margin: 95px 0px 150px 184px;
+    &__img{
+        margin-left: -150px;
+    }
+    &__information{
+        margin: 55px 0px 0px 200px;
+        // img{
+        //     margin-left: 200px;
+        // }
+        &--title{
+            font-size: 35px;
+            font-weight: bold;
+        }
+        &--check{
+            @include display-flex-row;
+            margin: 20px 0px 10px 0px;
+            p{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.background-gray{
+    text-align: center;
+    background-color: $bone-white;
+}
+
+.container4{
+    margin: 60px 150px;
+    &__description{
+        margin-top: 150px;
+        &--title{
+            font-size: 35px;
+        }
+        &--p{
+            margin-top: 20px;
+            color:$gray;
+        }
+    }
+    &__plans{
+        @include display-flex-row;
+        justify-content: center;
+        &--plan{
+            width: 330px;
+            height: 760px;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px;
+            margin: 60px 25px;
+            &-img{
+                margin: 80px 0px 30px 0px;
+            }
+            &-title{
+                margin-bottom: 30px;
+            }
+            &-checks{
+                height: 250px;
+                &-check{
+                    @include display-flex-row;
+                    margin: 0px 0px 10px 70px;
+                    p{
+                        margin-left: 20px;
+                    }
+                }
+            }
+            &-bottom{
+                position: relative;
+                margin: 40px;
+                &-description{
+                    margin-bottom:20px; 
+                }
+                &-button{
+                    @include button($orange);
+                    margin: 0 auto;
+                }
+                &-button:hover{
+                    @include hover-button($orange,$ligth-orange);
+                    margin: 0 auto;
+                }
+            }
+        }
+        &--plan:hover{
+            border: 2px solid $orange;
+        }
+    }
+}
+
+.footer{
+    @include display-flex-row;
+    background-color: $dark-white;
+    &__left{
+        margin: 0px 300px 0px 150px;
+        &--text{
+            color: $gray;
+            font-size: 16px;
+            line-height: 30px;
+            span{
+                font-weight: 700;
+            }
+        }
+        &--socialMedia{
+            @include display-flex-row;
+            margin: 20px 0px 30px 0px;
+        }
+        &--year{
+            color: $ligth-gray;
+        }
+    }
+    &__rigth{
+        @include display-flex-row;
+        &--product{
+            margin-left: 125px;
+            &-title{
+                font-size: 18px;
+                font-weight: 700;
+            }
+            &-p{
+                margin-top: 20px;
+                font-size: 16px;
+            }
+        }
+    }
+}
